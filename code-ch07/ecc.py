@@ -403,7 +403,7 @@ class S256Point(Point):
         return total.x.num == sig.r
 
     def sec(self, compressed=True):
-        '''returns the binary version of the SEC format'''
+        '''returns the binary version of the sec format'''
         # if compressed, starts with b'\x02' if self.y.num is even, b'\x03' if self.y is odd
         # then self.x.num
         # remember, you have to convert self.x.num/self.y.num to binary (some_integer.to_bytes(32, 'big'))
